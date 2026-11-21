@@ -1,0 +1,10 @@
+feature,mean_abs_shap_test,mean_abs_shap_all,shap_feature_spearman_r,direction_effect,perm_importance_roc_auc
+student_message_count,1.46447,1.54291,0.899,Higher -> aug (+),0.15264
+verification_request_rate,0.60031,0.59879,-0.617,Higher -> vanilla (-),0.05956
+average_word_count,0.58242,0.5904,-0.716,Higher -> vanilla (-),-0.00274
+complete_solution_request_rate,0.37724,0.37842,0.103,Higher -> aug (+),0.0394
+conceptual_question_rate,0.36908,0.37023,-0.918,Higher -> vanilla (-),0.02769
+average_question_count,0.29567,0.29325,0.639,Higher -> aug (+),0.01262
+code_prompt_rate,0.15746,0.15487,-0.751,Higher -> vanilla (-),-0.00213
+explanation_request_rate,0.12476,0.12657,-0.717,Higher -> vanilla (-),-0.00057
+followup_prompt_rate,0.06323,0.04978,-0.232,Higher -> vanilla (-),-0.00175

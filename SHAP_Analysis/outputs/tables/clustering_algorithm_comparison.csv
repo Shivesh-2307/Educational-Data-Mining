@@ -1,0 +1,4 @@
+algorithm,silhouette,davies_bouldin,calinski_harabasz
+K-Means (k=4),0.2465,1.7668,87.07
+Agglomerative Ward (k=4),0.2169,2.0113,68.24
+Gaussian Mixture (k=4),0.0401,2.9433,30.85

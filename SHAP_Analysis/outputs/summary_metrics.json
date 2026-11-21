@@ -1,0 +1,335 @@
+{
+  "environment": {
+    "python": "3.13.1",
+    "pandas": "2.2.3",
+    "numpy": "2.4.4",
+    "scikit_learn": "1.6.1",
+    "shap": "0.54.1",
+    "scipy": "1.15.2",
+    "seed": 42
+  },
+  "audit": {
+    "student_rows": 518,
+    "student_cols": 33,
+    "unique_students": 518,
+    "duplicate_usernames": 0,
+    "missing_values_total": 0,
+    "infinite_values_total": 0,
+    "message_rows": 28664,
+    "message_cols": 23,
+    "treatment_counts": {
+      "aug": 277,
+      "vanilla": 241
+    },
+    "grade_counts": {
+      "9": 214,
+      "10": 211,
+      "11": 93
+    },
+    "grade_x_treatment": {
+      "9": {
+        "aug": 109,
+        "vanilla": 105
+      },
+      "10": {
+        "aug": 105,
+        "vanilla": 106
+      },
+      "11": {
+        "aug": 63,
+        "vanilla": 30
+      }
+    },
+    "primary_skewness": {
+      "student_message_count": 1.043,
+      "average_word_count": 2.412,
+      "average_question_count": 8.179,
+      "explanation_request_rate": 4.487,
+      "complete_solution_request_rate": 2.305,
+      "verification_request_rate": 4.819,
+      "conceptual_question_rate": 2.358,
+      "code_prompt_rate": 3.425,
+      "followup_prompt_rate": 4.341
+    },
+    "sparse_nonzero_pct": {
+      "hint_request_rate": 7.14,
+      "refinement_request_rate": 3.09,
+      "multiple_question_rate": 5.79
+    }
+  },
+  "clustering": {
+    "chosen_k": 4,
+    "best_k_overall_silhouette": 2,
+    "metrics_table": [
+      {
+        "k": 2,
+        "inertia": 3907.72,
+        "silhouette": 0.3338,
+        "davies_bouldin": 1.862,
+        "calinski_harabasz": 99.6
+      },
+      {
+        "k": 3,
+        "inertia": 3453.05,
+        "silhouette": 0.2408,
+        "davies_bouldin": 2.026,
+        "calinski_harabasz": 90.15
+      },
+      {
+        "k": 4,
+        "inertia": 3091.1,
+        "silhouette": 0.2465,
+        "davies_bouldin": 1.7668,
+        "calinski_harabasz": 87.07
+      },
+      {
+        "k": 5,
+        "inertia": 2810.61,
+        "silhouette": 0.2325,
+        "davies_bouldin": 1.579,
+        "calinski_harabasz": 84.48
+      },
+      {
+        "k": 6,
+        "inertia": 2532.08,
+        "silhouette": 0.2582,
+        "davies_bouldin": 1.4333,
+        "calinski_harabasz": 86.14
+      },
+      {
+        "k": 7,
+        "inertia": 2298.17,
+        "silhouette": 0.2688,
+        "davies_bouldin": 1.3594,
+        "calinski_harabasz": 87.6
+      },
+      {
+        "k": 8,
+        "inertia": 2066.97,
+        "silhouette": 0.2833,
+        "davies_bouldin": 1.2603,
+        "calinski_harabasz": 91.47
+      }
+    ],
+    "algorithm_comparison": [
+      {
+        "algorithm": "K-Means (k=4)",
+        "silhouette": 0.2465,
+        "davies_bouldin": 1.7668,
+        "calinski_harabasz": 87.07
+      },
+      {
+        "algorithm": "Agglomerative Ward (k=4)",
+        "silhouette": 0.2169,
+        "davies_bouldin": 2.0113,
+        "calinski_harabasz": 68.24
+      },
+      {
+        "algorithm": "Gaussian Mixture (k=4)",
+        "silhouette": 0.0401,
+        "davies_bouldin": 2.9433,
+        "calinski_harabasz": 30.85
+      }
+    ],
+    "cluster_names": {
+      "0": "Brief / Low-Inquiry Users",
+      "1": "Student Message Count-Focused Users",
+      "2": "Code-Heavy & Verification Users",
+      "3": "Followup Prompt-Focused Users"
+    },
+    "cluster_sizes": {
+      "0": 124,
+      "1": 282,
+      "2": 73,
+      "3": 39
+    },
+    "chi_cluster_vs_treatment": {
+      "chi2": 194.1812,
+      "p_value": 0.0,
+      "dof": 3,
+      "cramers_v": 0.6123
+    },
+    "chi_cluster_vs_grade": {
+      "chi2": 38.0397,
+      "p_value": 1e-06,
+      "dof": 6,
+      "cramers_v": 0.1916
+    }
+  },
+  "supervised": {
+    "train_n": 414,
+    "test_n": 104,
+    "best_behavioral_experiment": "E1_Primary",
+    "best_behavioral_model": "HistGradientBoosting",
+    "best_e3_model": "Random Forest",
+    "chi_grade_vs_treatment": {
+      "chi2": 9.3323,
+      "p_value": 0.009408,
+      "dof": 2,
+      "cramers_v": 0.1342
+    },
+    "best_behavioral_cv": {
+      "experiment": "E1_Primary",
+      "model": "HistGradientBoosting",
+      "cv_roc_auc_mean": 0.9106,
+      "cv_roc_auc_std": 0.0139,
+      "train_roc_auc_mean": 0.9893,
+      "cv_f1_macro_mean": 0.8197,
+      "cv_f1_mean": 0.8312,
+      "cv_accuracy_mean": 0.8213,
+      "cv_precision_mean": 0.8421,
+      "cv_recall_mean": 0.8286
+    },
+    "best_e3_cv": {
+      "experiment": "E3_Combined_Grade",
+      "model": "Random Forest",
+      "cv_roc_auc_mean": 0.9083,
+      "cv_roc_auc_std": 0.0186,
+      "train_roc_auc_mean": 0.97,
+      "cv_f1_macro_mean": 0.8421,
+      "cv_f1_mean": 0.8504,
+      "cv_accuracy_mean": 0.843,
+      "cv_precision_mean": 0.8745,
+      "cv_recall_mean": 0.8327
+    },
+    "best_behavioral_test": {
+      "experiment": "E1_Primary",
+      "model": "HistGradientBoosting",
+      "test_roc_auc": 0.9025,
+      "test_f1_macro": 0.7976,
+      "test_f1_aug": 0.8073,
+      "test_accuracy": 0.7981,
+      "test_precision": 0.8302,
+      "test_recall": 0.7857
+    },
+    "best_e3_test": {
+      "experiment": "E3_Combined_Grade",
+      "model": "Random Forest",
+      "test_roc_auc": 0.9156,
+      "test_f1_macro": 0.8269,
+      "test_f1_aug": 0.8302,
+      "test_accuracy": 0.8269,
+      "test_precision": 0.88,
+      "test_recall": 0.7857
+    }
+  },
+  "shap": {
+    "behavioral_explainer": "TreeExplainer",
+    "e3_explainer": "TreeExplainer",
+    "top_behavioral_features": [
+      {
+        "feature": "student_message_count",
+        "mean_abs_shap_test": 1.46447,
+        "mean_abs_shap_all": 1.54291,
+        "shap_feature_spearman_r": 0.899,
+        "direction_effect": "Higher -> aug (+)",
+        "perm_importance_roc_auc": 0.15264
+      },
+      {
+        "feature": "verification_request_rate",
+        "mean_abs_shap_test": 0.60031,
+        "mean_abs_shap_all": 0.59879,
+        "shap_feature_spearman_r": -0.617,
+        "direction_effect": "Higher -> vanilla (-)",
+        "perm_importance_roc_auc": 0.05956
+      },
+      {
+        "feature": "average_word_count",
+        "mean_abs_shap_test": 0.58242,
+        "mean_abs_shap_all": 0.5904,
+        "shap_feature_spearman_r": -0.716,
+        "direction_effect": "Higher -> vanilla (-)",
+        "perm_importance_roc_auc": -0.00274
+      },
+      {
+        "feature": "complete_solution_request_rate",
+        "mean_abs_shap_test": 0.37724,
+        "mean_abs_shap_all": 0.37842,
+        "shap_feature_spearman_r": 0.103,
+        "direction_effect": "Higher -> aug (+)",
+        "perm_importance_roc_auc": 0.0394
+      },
+      {
+        "feature": "conceptual_question_rate",
+        "mean_abs_shap_test": 0.36908,
+        "mean_abs_shap_all": 0.37023,
+        "shap_feature_spearman_r": -0.918,
+        "direction_effect": "Higher -> vanilla (-)",
+        "perm_importance_roc_auc": 0.02769
+      },
+      {
+        "feature": "average_question_count",
+        "mean_abs_shap_test": 0.29567,
+        "mean_abs_shap_all": 0.29325,
+        "shap_feature_spearman_r": 0.639,
+        "direction_effect": "Higher -> aug (+)",
+        "perm_importance_roc_auc": 0.01262
+      }
+    ],
+    "top_e3_features": [
+      {
+        "feature": "student_message_count",
+        "mean_abs_shap_test": 0.1461,
+        "shap_feature_spearman_r": 0.947,
+        "direction_effect": "Higher -> aug (+)"
+      },
+      {
+        "feature": "conceptual_question_rate",
+        "mean_abs_shap_test": 0.0815,
+        "shap_feature_spearman_r": -0.928,
+        "direction_effect": "Higher -> vanilla (-)"
+      },
+      {
+        "feature": "average_word_count",
+        "mean_abs_shap_test": 0.05147,
+        "shap_feature_spearman_r": -0.743,
+        "direction_effect": "Higher -> vanilla (-)"
+      },
+      {
+        "feature": "complete_solution_request_rate",
+        "mean_abs_shap_test": 0.04775,
+        "shap_feature_spearman_r": -0.133,
+        "direction_effect": "Higher -> vanilla (-)"
+      },
+      {
+        "feature": "verification_request_rate",
+        "mean_abs_shap_test": 0.04552,
+        "shap_feature_spearman_r": -0.667,
+        "direction_effect": "Higher -> vanilla (-)"
+      },
+      {
+        "feature": "average_question_count",
+        "mean_abs_shap_test": 0.03652,
+        "shap_feature_spearman_r": 0.602,
+        "direction_effect": "Higher -> aug (+)"
+      }
+    ],
+    "waterfall_student_aug": {
+      "username": 110432,
+      "prob_aug": 0.9951,
+      "true_label": "aug"
+    },
+    "waterfall_student_vanilla": {
+      "username": 120944,
+      "prob_aug": 0.0118,
+      "true_label": "vanilla"
+    }
+  },
+  "prompt_audit": {
+    "total_messages": 28664,
+    "messages_with_any_rule_label_pct": 20.18,
+    "messages_unlabelled_pct": 79.82,
+    "non_ascii_messages_count": 0,
+    "non_ascii_messages_pct": 0.0,
+    "turkish_char_messages_count": 0,
+    "encoding_artefact_messages_count": 0,
+    "high_solution_seekers_95th_pct_threshold": 0.3705,
+    "high_solution_seekers_count": 26,
+    "session_message_counts": {
+      "1": 5449,
+      "2": 7209,
+      "3": 8281,
+      "4": 7725
+    }
+  }
+}
