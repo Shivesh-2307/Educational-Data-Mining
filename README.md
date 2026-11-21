@@ -1,87 +1,37 @@
-# Student–LLM Interaction Analysis
+# Student-AI Learning Outcome Research
 
-This project analyzes how student interaction patterns relate to experimental treatment groups in an LLM-based educational study.
+This project asks whether the language students use while working with AI relates to their later math scores, and whether conversation patterns differ between GPT Base and GPT Tutor.
 
-> The current data has a binary treatment target (`aug` vs. `vanilla`) but no independent academic outcome. Accordingly, this project predicts treatment and explains predictive associations; it does not establish that either treatment caused learning gains.
+**Treatment labels:** `vanilla` = GPT Base; `aug` = GPT Tutor.
 
-## Quick Start
+## Start here
 
-### Interactive notebook
+1. Read [the essential research guide](docs/RESEARCH_GUIDE.md).
+2. Open the notebooks in order: [01 - Text data](notebooks/01_text_features_and_data.ipynb), [02 - Profiles and treatment](notebooks/02_interaction_profiles_and_treatment.ipynb), [03 - Learning outcomes](notebooks/03_learning_outcomes.ipynb).
+3. Open the [editable full project report](docs/Student_AI_Learning_Outcome_Research_Report.docx) for presentation material.
+4. Use [the audit](docs/PROJECT_AUDIT.md) for data provenance and [the output catalog](docs/OUTPUT_CATALOG.md) to find saved files.
 
-Open:
-
-- `SHAP_Analysis/Student_LLM_Unified_Pipeline_SHAP.ipynb`
-
-The notebook is organized into five stages: audit/EDA, clustering, E1–E3 classification, SHAP, and statistical auditing.
-
-### Script
-
-From the repository root:
+Notebook 01 runs the text pipeline. Notebook 02 displays those results. Notebook 03 runs the outcome analysis. The matching Python scripts are the source of the calculations and can also be run directly from the repository root:
 
 ```powershell
-./.venv/Scripts/python.exe SHAP_Analysis/run_full_pipeline.py
+./.venv/Scripts/python.exe Research_Analysis/run_research_analysis.py
+./.venv/Scripts/python.exe Research_Analysis/run_outcome_analysis.py
 ```
 
-## Repository Layout
+The first script must run before the second. Both reuse the existing processed data and save generated files under the single top-level `outputs/` folder. They do not modify the original processed datasets. Regenerate the DOCX report with `./.venv/Scripts/python.exe reports/build_project_report.py`.
+
+## Project map
 
 ```text
-ProcessedDatasets/
-  student_features_final.csv       518 student-level records
-  cleaned_user_messages.csv        28,664 prompt-level records
-  preprocessing_config.json        feature and preprocessing configuration
-
-SHAP_Analysis/
-  Student_LLM_Unified_Pipeline_SHAP.ipynb
-  run_full_pipeline.py             script version of the notebook
-  Research_Report.md               complete research report
-  README.md                        package-specific instructions
-  outputs/
-    figures/                       generated visualizations
-    tables/                        generated CSV evidence
-    summary_metrics.json           run summary
-
-docs/
-  PROJECT_OVERVIEW.md              macro architecture and methodology
-  NOTEBOOK_GUIDE.md                how to run and interpret notebook stages
-
-Regression.py                      future/legacy continuous-outcome template
-requirements.txt                   reproducible Python dependencies
-.gitignore
+ProcessedDatasets/                 original processed inputs
+PreProcessing/                     original preprocessing notebook + full conversation export
+AcademicOutcomes/                  exact-ID matched public score input
+Research_Analysis/                 current analysis scripts
+notebooks/                         three notebooks for the current workflow
+reports/                          editable DOCX report and its builder
+outputs/research/                  current derived datasets, tables, figures, and results
+outputs/legacy_treatment_classifier/ saved older classifier results
+archive/legacy_treatment_classifier/ older treatment classifier code and notebook
 ```
 
-## Research Pipeline
-
-```text
-raw prompt records
-  -> prompt-level cleaning and feature engineering
-  -> 518 student-level records
-  -> data audit and EDA
-  -> unsupervised clustering
-  -> E1 / E2 / E3 classification
-  -> SHAP explanation
-  -> grade and statistical validation
-```
-
-## Feature Experiments
-
-- **E1 — Primary:** nine core interaction features
-- **E2 — Primary + sparse:** E1 plus rare prompt rates and flags
-- **E3 — Combined:** E2 plus grade metadata
-
-Preprocessing uses `log1p` and `StandardScaler`. Transformations are fitted inside cross-validation pipelines to prevent training-fold leakage.
-
-## Environment
-
-Create or reuse the local environment:
-
-```powershell
-C:/Python312/python.exe -m venv .venv
-./.venv/Scripts/python.exe -m pip install -r requirements.txt
-./.venv/Scripts/python.exe -m pip install ipykernel
-```
-
-VS Code/Jupyter uses `.venv/Scripts/python.exe` for notebook execution.
-
-## Results Are Observational
-
-The model distinguishes treatment groups strongly, but SHAP does not demonstrate causality and treatment classification is not a substitute for an academic outcome analysis.
+The archived `Student_LLM_Unified_Pipeline_SHAP.ipynb` is relevant only as a record of the earlier treatment-classification work. It predicts GPT Base versus GPT Tutor; it does not analyze exam scores. The current work is presented in the three notebooks above.
