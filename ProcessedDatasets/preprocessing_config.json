@@ -1,0 +1,89 @@
+{
+    "transformation": "log1p",
+    "scaling": "StandardScaler",
+    "primary_features": [
+        "student_message_count",
+        "average_word_count",
+        "average_question_count",
+        "explanation_request_rate",
+        "complete_solution_request_rate",
+        "verification_request_rate",
+        "conceptual_question_rate",
+        "code_prompt_rate",
+        "followup_prompt_rate"
+    ],
+    "supplementary_rate_features": [
+        "hint_request_rate",
+        "refinement_request_rate",
+        "multiple_question_rate"
+    ],
+    "supplementary_binary_features": [
+        "hint_request_present",
+        "refinement_request_present",
+        "multiple_question_present"
+    ],
+    "identifier": "username",
+    "target": "treatment",
+    "metadata": [
+        "grade",
+        "conversation_count",
+        "session_count",
+        "problem_count"
+    ],
+    "sparse_binary_features": [
+        "hint_request_present",
+        "refinement_request_present",
+        "multiple_question_present"
+    ],
+    "all_interaction_features": [
+        "student_message_count",
+        "average_word_count",
+        "average_question_count",
+        "explanation_request_rate",
+        "complete_solution_request_rate",
+        "verification_request_rate",
+        "conceptual_question_rate",
+        "code_prompt_rate",
+        "followup_prompt_rate",
+        "hint_request_rate",
+        "refinement_request_rate",
+        "multiple_question_rate"
+    ],
+    "student_count": 518,
+    "user_message_count": 28664,
+    "final_student_dataset_columns": [
+        "username",
+        "student_message_count",
+        "average_prompt_length",
+        "average_word_count",
+        "average_sentence_count",
+        "average_question_count",
+        "explanation_request_count",
+        "hint_request_count",
+        "complete_solution_request_count",
+        "verification_request_count",
+        "conceptual_question_count",
+        "refinement_request_count",
+        "multiple_question_count",
+        "code_prompt_count",
+        "followup_prompt_count",
+        "grade",
+        "treatment",
+        "unique_treatments",
+        "conversation_count",
+        "session_count",
+        "problem_count",
+        "explanation_request_rate",
+        "hint_request_rate",
+        "complete_solution_request_rate",
+        "verification_request_rate",
+        "conceptual_question_rate",
+        "refinement_request_rate",
+        "multiple_question_rate",
+        "code_prompt_rate",
+        "followup_prompt_rate",
+        "hint_request_present",
+        "refinement_request_present",
+        "multiple_question_present"
+    ]
+}

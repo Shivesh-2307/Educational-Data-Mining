@@ -1,0 +1,5 @@
+kmeans_cluster,profile_hypothesis,basis
+0,Higher verification and complete-solution request rates,Observed cluster means in verification_request_rate and complete_solution_request_rate
+1,"Higher message volume with shorter, lower-intent prompts",Observed cluster means in student_message_count and average_word_count; low intent rates
+2,Conceptual and solution-seeking prompts with math terminology,"Observed cluster means in conceptual_question_rate, complete_solution_request_rate and math terminology"
+3,Longer math-heavy prompts with more code,"Observed cluster means in average_word_count, code_prompt_rate and math terminology"

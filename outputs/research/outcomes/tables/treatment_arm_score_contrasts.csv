@@ -1,0 +1,3 @@
+outcome,contrast,coefficient,cluster_robust_se,ci95_low,ci95_high,p_value,n_rows,n_students,n_classes,interpretation
+Part3Tot,GPT Tutor (aug) - GPT Base (vanilla),0.021854569474676143,0.018801848386181787,-0.016793183384020527,0.06050232233337281,0.2556468715693082,1702,508,27,Randomized class-arm contrast within the observed non-honors GPT cohort; Part3Tot is the later unassisted exam.
+Part2Tot,GPT Tutor (aug) - GPT Base (vanilla),0.22585361556901845,0.02714985017457157,0.17004629928044324,0.28166093185759367,8.43595286607216e-09,1702,508,27,Randomized class-arm contrast within the observed non-honors GPT cohort; Part3Tot is the later unassisted exam.

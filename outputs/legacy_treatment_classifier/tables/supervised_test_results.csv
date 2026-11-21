@@ -1,0 +1,19 @@
+experiment,model,test_roc_auc,test_f1_macro,test_f1_aug,test_accuracy,test_precision,test_recall
+E1_Primary,Dummy Baseline,0.5,0.35,0.7,0.5385,0.5385,1.0
+E1_Primary,Logistic Regression,0.9111,0.8358,0.8468,0.8365,0.8545,0.8393
+E1_Primary,Decision Tree,0.877,0.7972,0.8108,0.7981,0.8182,0.8036
+E1_Primary,Random Forest,0.9159,0.7979,0.8037,0.7981,0.8431,0.7679
+E1_Primary,Gradient Boosting,0.9178,0.8172,0.8224,0.8173,0.8627,0.7857
+E1_Primary,HistGradientBoosting,0.9103,0.7881,0.7963,0.7885,0.8269,0.7679
+E2_Primary_Sparse,Dummy Baseline,0.5,0.35,0.7,0.5385,0.5385,1.0
+E2_Primary_Sparse,Logistic Regression,0.9133,0.8452,0.8571,0.8462,0.8571,0.8571
+E2_Primary_Sparse,Decision Tree,0.8899,0.8246,0.8448,0.8269,0.8167,0.875
+E2_Primary_Sparse,Random Forest,0.9189,0.8269,0.8302,0.8269,0.88,0.7857
+E2_Primary_Sparse,Gradient Boosting,0.9196,0.8364,0.8411,0.8365,0.8824,0.8036
+E2_Primary_Sparse,HistGradientBoosting,0.9085,0.8169,0.8257,0.8173,0.8491,0.8036
+E3_Combined_Grade,Dummy Baseline,0.5,0.35,0.7,0.5385,0.5385,1.0
+E3_Combined_Grade,Logistic Regression,0.9204,0.8646,0.875,0.8654,0.875,0.875
+E3_Combined_Grade,Decision Tree,0.8899,0.8246,0.8448,0.8269,0.8167,0.875
+E3_Combined_Grade,Random Forest,0.9156,0.8269,0.8302,0.8269,0.88,0.7857
+E3_Combined_Grade,Gradient Boosting,0.9215,0.8362,0.844,0.8365,0.8679,0.8214
+E3_Combined_Grade,HistGradientBoosting,0.9048,0.8165,0.8288,0.8173,0.8364,0.8214
