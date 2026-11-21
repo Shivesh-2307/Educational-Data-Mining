@@ -1,8 +1,8 @@
 feature,aug_mean,aug_median,vanilla_mean,vanilla_median,mannwhitney_u,p_value,rank_biserial_r,fdr_q_value,significant_fdr_05
 student_message_count,73.6101,70.0,34.332,32.0,54404.0,0.0,0.6299,0.0,True
 average_word_count,5.3325,4.3817,9.1241,5.8101,22611.5,0.0,-0.3226,0.0,True
-verification_request_rate,0.0032,0.0,0.0376,0.0,26173.5,0.0,-0.2159,0.0,True
 conceptual_question_rate,0.0636,0.0385,0.1635,0.125,18369.5,0.0,-0.4497,0.0,True
+verification_request_rate,0.0032,0.0,0.0376,0.0,26173.5,0.0,-0.2159,0.0,True
 hint_request_rate,0.0025,0.0,0.0002,0.0,37301.5,0.0,0.1175,1e-06,True
 code_prompt_rate,0.008,0.0,0.0341,0.0,28274.0,0.000113,-0.1529,0.000226,True
 complete_solution_request_rate,0.0568,0.0375,0.1307,0.0517,29311.5,0.015296,-0.1218,0.026222,True
