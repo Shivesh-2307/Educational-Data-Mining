@@ -1,5 +1,0 @@
-cluster,student_message_count,average_word_count,average_question_count,explanation_request_rate,complete_solution_request_rate,verification_request_rate,conceptual_question_rate,code_prompt_rate,followup_prompt_rate
-0,25.0,4.5,0.0,0.0,0.183,0.0,0.151,0.0,0.0
-1,69.5,4.2989,0.032,0.0,0.0318,0.0,0.0363,0.0,0.0
-2,33.0,17.7234,0.1667,0.0,0.0274,0.0,0.1613,0.1053,0.0
-3,43.0,7.2973,0.0588,0.0,0.1379,0.1343,0.0909,0.0,0.082

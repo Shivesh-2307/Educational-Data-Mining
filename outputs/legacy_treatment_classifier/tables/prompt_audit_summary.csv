@@ -1,2 +1,0 @@
-total_messages,messages_with_any_rule_label_pct,messages_unlabelled_pct,non_ascii_messages_count,non_ascii_messages_pct,turkish_char_messages_count,encoding_artefact_messages_count,high_solution_seekers_95th_pct_threshold,high_solution_seekers_count,session_message_counts
-28664,20.18,79.82,0,0.0,0,0,0.3705,26,"{1: 5449, 2: 7209, 3: 8281, 4: 7725}"
